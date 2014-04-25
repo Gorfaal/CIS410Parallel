@@ -23,6 +23,7 @@ class PixelStencil{
 		const int cols; 
 		pixel * const in; 
 		pixel * const out;
+		const int dim;
 	public:  
 		PixelStencil(){}
 		void operator()( const blocked_range<int>& r ) const {  
@@ -116,8 +117,6 @@ void gaussian_kernel(const int rows, const int cols, const double stddev, double
 void apply_stencil(const int radius, const double stddev, const int rows, const int cols, pixel * const in, pixel * const out) {
 	const int dim = radius*2+1;
 	double kernel[dim*dim];
-	double kernalX[3*3];
-	double kernalY[3*3];
 	gaussian_kernel(dim, dim, stddev, kernel);
 	PixelStencil stencil;
 	stencil.radius = radius;
