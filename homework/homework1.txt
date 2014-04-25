@@ -1,0 +1,27 @@
+Mike Knowles
+CIS410
+4/21/14
+Homework 1
+
+Parallel Computing
+
+1.	A parallel computer is a computer that uses multiple processing units in unison to solve problems. A computer needs more than one core to be considered a parallel computer, due to the requirement that calculations must happen simultaneously. 
+2.	Parallelism = concurrency + parallel HW + performance
+3.	Yes, some small programs can be parallelized but still require too much overhead for the parallelization.
+4.	Parallelism is the future of computing.  Parallelism is also inevitable due to technological trends.
+
+Parallel Architectures
+1.	Shared memory parallel systems allow for any processing unit to access memory, whereas in a distributed system memory is allocated to each processing unit. Shared memory allow for a more efficient data share between processors. This reduces average latency and average bandwidth, but can lead to cache coherence problems. Distributed memory systems are easier to build and scale incrementally. 
+2.	NUMA stands for non-uniform memory access. It was created for systems where having local memory access happen faster than remote memory access is a desirable trait. 
+3.	Multi-core processors fill the current consumer market. I think that the typical consumer uses their processor a different way than the typical HPC community member. I don’t think they are disruptive because they have different roles to fill. 
+4.	I would agree that it seems that the interconnection network is key for large-scale parallel systems. We are reaching a limit of how fast an individual processor can go without generating to much heat, so we have to get performance out of how those processors interact. 
+
+Parallel Performance Theory
+1.	Amdahl’s law assumes that we have a fixed problem size, which means that speedup is bound by execution time in the computation. Gustafson-Barsis law however assumes that your problem size can scale with the number of processors. This means that speedup is bound by the number of processors(!!!).
+2.	The efficiency goes down because you increase the total run time by increasing communications between processing elements. I think it is always true.
+3.	a) No, it is possible for algorithm B to have better weak scaling. Because algorithm A has a better strong scaling (in relation to total problem size), doesn’t mean algorithm B can’t have a stronger weak scaling (in relation to problem size per processor)
+b) I think that it could be possible if a parallel machine was built specifically for that purpose.
+4.	No it doesn’t cause a problem when comparing speedups between the two machines. Isn’t the point of comparing the speedups seeing how the algorithm runs differently on each machine? It seems like that’s what you are looking for.
+
+
+
