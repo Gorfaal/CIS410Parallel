@@ -17,15 +17,14 @@ struct pixel {
 };
 
 class PixelStencil{
-	private:
+	public:
 		const int radius;
 		const int rows; 
 		const int cols; 
 		pixel * const in; 
 		pixel * const out;
 		const int dim;
-		double * kernel;
-	public:  
+		double * kernel; 
 		PixelStencil(){}
 		void operator()( const blocked_range<int>& r ) const {  
 			for (int i=r.begin(); i!=r.end(); i++ ){  
