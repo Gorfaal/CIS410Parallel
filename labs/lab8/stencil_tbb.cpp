@@ -18,12 +18,12 @@ struct pixel {
 
 class PixelStencil{
 	public:
-		const int radius;
-		const int rows; 
-		const int cols; 
-		pixel * const in; 
-		pixel * const out;
-		const int dim;
+		int radius;
+		int rows; 
+		int cols; 
+		pixel * in; 
+		pixel * out;
+		int dim;
 		double * kernel; 
 		PixelStencil(){}
 		void operator()( const blocked_range<int>& r ) const {  
