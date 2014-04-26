@@ -5,7 +5,8 @@ default: all
 crypto_mp: openmp.c key.c
 	icc -std=c99 -o crypto_cilk openmp.c key.c -fopenmp
 
-crypto_tbb:
+crypto_tbb: tbb.cpp key.c
+	 icpc -o tbb_crypto tbb_crypto.cpp key.c -ltbb 
 
 crypto_cilk: cilk.c key.c
 	icc -std=c99 -o crypto_cilk cilk.c key.c -lcilkrts
