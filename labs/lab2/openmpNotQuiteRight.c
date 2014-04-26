@@ -22,7 +22,7 @@ int main()
    for(i=1;i<=ARRAYSIZE;i++)
    {
 	#pragma omp ordered
-      a[i]=a[i]+a[((i-1))];
+      a[i]=a[i]+a[((i-1)%ARRAYSIZE)];
    }
    
    for(i=0;i<ARRAYSIZE;i++)
